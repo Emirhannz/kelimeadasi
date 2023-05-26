@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/anamennu.unity
+    path: Assets/Scenes/anamennnu.unity
     guid: 808f9511fac6891478cd3f6d593c84a1
   - enabled: 1
     path: Assets/Scenes/oyunekrani.unity

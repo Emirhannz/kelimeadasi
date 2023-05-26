@@ -16,7 +16,7 @@ public class anamennnu : MonoBehaviour
     public void ReturnToMainMenu()
     {
 
-        SceneManager.LoadScene("anamennu");
+        SceneManager.LoadScene("anamennnu");
 
     }
 
