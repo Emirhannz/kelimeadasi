@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScreen.unity
     guid: 7ccae4ae738c8e0419880b858d1880d4
+  - enabled: 1
+    path: Assets/Scenes/AYARLAR.unity
+    guid: 739b7f3a628accf40b3a25ff5eadb8fb
   m_configObjects: {}
