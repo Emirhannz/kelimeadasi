@@ -11,14 +11,20 @@ public class button : MonoBehaviour
 
     RectTransform buyukluk;
 
+
+
     string harf;
 
     bool harf_verildi = false;
 
 
+   
     public bool yok_ol = false;
 
     float kuculme_miktari = 0.00f;
+    
+    
+    
     void Start()
     {
         admins = GameObject.Find("admin").GetComponent<admin>();    
