@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class buton : MonoBehaviour
+public class NewBehaviourScript : MonoBehaviour
 {
     yonetici yonet;
 
