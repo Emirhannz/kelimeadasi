@@ -13,11 +13,29 @@ public class GameScreen : MonoBehaviour
 
     }
 
+    public void QuitGame()
+    {
+        Debug.Log("Oyundan Çýktýk");
+        Application.Quit();
+
+
+    }
+
+    public void AYARLAR()
+    {
+
+        SceneManager.LoadScene("AYARLAR");
+
+    }
+
+
     public void ReturnToMainMenu()
     {
 
         SceneManager.LoadScene("anamennnu");
 
     }
+
+
 
 }
