@@ -70,7 +70,7 @@ public class yonetici : MonoBehaviour
 
             foreach(GameObject buton in isaretli_butonlar)
             {
-                buton.GetComponent<buton>().onClick.Invoke();  
+               // buton.GetComponent<buton>().onClick.Invoke();  
             }
         }
 
