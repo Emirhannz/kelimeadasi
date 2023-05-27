@@ -70,7 +70,7 @@ public class yonetici : MonoBehaviour
 
             foreach(GameObject buton in isaretli_butonlar)
             {
-               // buton.GetComponent<buton>().onClick.Invoke();  
+                //buton.GetComponent<buton>().onClick.Invoke();  
             }
         }
 
@@ -78,6 +78,6 @@ public class yonetici : MonoBehaviour
         isaretli_butonlar.Clear();
         kelime = null;
 
-        //if(bulunan_kelime_sayisi == sozluk.Length)
+       //if(bulunan_kelime_sayisi == sozluk.Length)
     }
 }
