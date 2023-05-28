@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
-using UnityEngine.Rendering;
+
 
 
 public class yonetici : MonoBehaviour
@@ -16,7 +15,9 @@ public class yonetici : MonoBehaviour
 
     string kelime = null;
 
-    public bool tiklandi = false;   
+    public bool tiklandi = false;
+
+    public GameObject bitti_panel;
 
     int puan = 0;   
     int bulunan_kelime_sayisi = 0;  
@@ -65,19 +66,28 @@ public class yonetici : MonoBehaviour
     {
         foreach(string kelimeler in sozluk)
         {
-            puan += 100;
-            bulunan_kelime_sayisi++;
-
-            foreach(GameObject buton in isaretli_butonlar)
+            if (kelimeler == kelime)
             {
-                //buton.GetComponent<buton>().onClick.Invoke();  
+                puan += 100;
+                bulunan_kelime_sayisi++;
+
+                foreach (GameObject buton in isaretli_butonlar)
+                {
+                    buton.GetComponent<buton>().yok_ol = true;  
+                }
+
             }
+
         }
 
 
         isaretli_butonlar.Clear();
         kelime = null;
 
-       //if(bulunan_kelime_sayisi == sozluk.Length)
+       if(bulunan_kelime_sayisi == sozluk.Length)
+        {
+            bitti_panel.SetActive(true);
+        }
+
     }
 }

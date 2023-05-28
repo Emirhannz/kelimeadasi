@@ -1,4 +1,4 @@
-    using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,6 +27,7 @@ public class buton : MonoBehaviour
         yonet = GameObject.Find("yonetici").GetComponent<yonetici>();
 
         renk = GetComponent<Image>();
+
         buyukluk = GetComponent<RectTransform>();   
 
         harf = gameObject.name;
@@ -36,7 +37,7 @@ public class buton : MonoBehaviour
     }
 
     
-    void Update()
+    private  void Update()
     {   
 
         if(yonet.tiklandi == false)
