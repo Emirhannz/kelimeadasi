@@ -8,8 +8,8 @@ using UnityEngine.UI;
 public class yonetici : MonoBehaviour
 {
     timer zaman;
-    
 
+    public timer zamanNesnesi;
     public string[] sozluk;
     public Text puan_txt;
 
@@ -30,6 +30,7 @@ public class yonetici : MonoBehaviour
     void Start()
     {
         isaretli_butonlar = new List<GameObject>();
+        zamanNesnesi = FindObjectOfType<timer>();
     }
 
     public void  isaretli_buton_olustur(GameObject buton)
@@ -89,6 +90,7 @@ public class yonetici : MonoBehaviour
        if(bulunan_kelime_sayisi == sozluk.Length)
         {
             bitti_panel.SetActive(true);
+            zamanNesnesi.Durdur();
         }
 
     }
