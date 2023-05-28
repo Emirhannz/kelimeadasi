@@ -11,7 +11,7 @@ public class timer : MonoBehaviour
     public GameObject süre_bitti_panel;
     private void Awake()
     {   
-        info = GameObject.FindWithTag("info").GetComponent
+        //info = GameObject.FindWithTag("info").GetComponent
         zaman = GameObject.Find("Timer").GetComponent<Slider>();
     }
     void Start()
@@ -21,7 +21,7 @@ public class timer : MonoBehaviour
         zaman.wholeNumbers = false;
         zaman.value = zaman.maxValue;
         sayac = zaman.value;
-
+        
     }
 
     
