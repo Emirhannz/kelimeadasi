@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class yonetici : MonoBehaviour
 {
+    timer zaman;
+    
 
     public string[] sozluk;
     public Text puan_txt;
@@ -90,4 +92,5 @@ public class yonetici : MonoBehaviour
         }
 
     }
+    
 }
