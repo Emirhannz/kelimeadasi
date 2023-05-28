@@ -32,13 +32,11 @@ public class timer : MonoBehaviour
             sayac -= Time.deltaTime;
             zaman.value = sayac;
             info.text = ((int)zaman.value).ToString();
-
-            if (zaman.value == zaman.minValue)
-            {
-                süre_bitti_panel.SetActive(true);
-            }
         }
         
-       
+        if(zaman.value == zaman.minValue)
+        {
+            süre_bitti_panel.SetActive(true);
+        }
     }
 }
