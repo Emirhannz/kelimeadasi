@@ -10,8 +10,8 @@ public class timer : MonoBehaviour
     public Slider zaman;
     public GameObject süre_bitti_panel;
     private void Awake()
-    {   
-        //info = GameObject.FindWithTag("info").GetComponent
+    {
+        info = GameObject.FindWithTag("info").GetComponent<Text>();
         zaman = GameObject.Find("Timer").GetComponent<Slider>();
     }
     void Start()
@@ -31,11 +31,12 @@ public class timer : MonoBehaviour
         {
             sayac -= Time.deltaTime;
             zaman.value = sayac;
+            info.text = ((int)zaman.value).ToString();
         }
         
-        if(zaman.value == zaman.minValue)
+        /*if(zaman.value == zaman.minValue)
         {
             süre_bitti_panel.SetActive(true);
-        }
+        }*/
     }
 }

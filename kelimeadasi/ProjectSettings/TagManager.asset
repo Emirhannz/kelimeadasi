@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Buton
   - timer
+  - info
   layers:
   - Default
   - TransparentFX
