@@ -36,6 +36,13 @@ public class GameScreen : MonoBehaviour
 
     }
 
+    public void ReturnToGameScreen()
+    {
+
+        SceneManager.LoadScene("GameScreen");
+
+    }
+
 
 
 }
