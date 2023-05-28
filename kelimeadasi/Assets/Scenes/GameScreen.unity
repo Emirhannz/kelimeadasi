@@ -11976,6 +11976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7715380fb1f481341a5e9cd061df29c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zamanNesnesi: {fileID: 0}
   sozluk:
   - "B\u0130LG\u0130SAYAR"
   - BELLEK

@@ -21,37 +21,37 @@ public class buton : MonoBehaviour
 
 
 
-    
+
     void Start()
     {
         yonet = GameObject.Find("yonetici").GetComponent<yonetici>();
 
         renk = GetComponent<Image>();
 
-        buyukluk = GetComponent<RectTransform>();   
+        buyukluk = GetComponent<RectTransform>();
 
         harf = gameObject.name;
 
 
-        
+
     }
 
-    
-    private  void Update()
-    {   
 
-        if(yonet.tiklandi == false)
+    private void Update()
+    {
+
+        if (yonet.tiklandi == false)
         {
             harf_verildi = false;
             renk.color = Color.white;
         }
-        
 
-        if(yok_ol == true)
+
+        if (yok_ol == true)
         {
             buyukluk.localScale -= new Vector3(kuculme_miktari, kuculme_miktari, kuculme_miktari);
 
-            if(buyukluk.localScale.x <= 0)
+            if (buyukluk.localScale.x <= 0)
             {
                 Destroy(gameObject);
             }
@@ -62,11 +62,11 @@ public class buton : MonoBehaviour
 
     public void yesil_ol()
     {
-        if(yonet.tiklandi == true)
+        if (yonet.tiklandi == true)
         {
             renk.color = Color.green;
 
-            if(harf_verildi == false)
+            if (harf_verildi == false)
             {
                 yonet.isaretli_buton_olustur(gameObject);
                 harf_verildi = true;
