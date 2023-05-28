@@ -16,7 +16,7 @@ public class timer : MonoBehaviour
     }
     void Start()
     {
-        zaman.maxValue = 10;
+        zaman.maxValue = 60;
         zaman.minValue = 0;
         zaman.wholeNumbers = false;
         zaman.value = zaman.maxValue;
@@ -32,11 +32,13 @@ public class timer : MonoBehaviour
             sayac -= Time.deltaTime;
             zaman.value = sayac;
             info.text = ((int)zaman.value).ToString();
+
+            if (zaman.value == zaman.minValue)
+            {
+                süre_bitti_panel.SetActive(true);
+            }
         }
         
-        /*if(zaman.value == zaman.minValue)
-        {
-            süre_bitti_panel.SetActive(true);
-        }*/
+       
     }
 }
