@@ -19,7 +19,7 @@ public class timer : MonoBehaviour
 
     void Start()
     {
-        zaman.maxValue = 60;
+        zaman.maxValue = 45;
         zaman.minValue = 0;
         zaman.wholeNumbers = false;
         zaman.value = zaman.maxValue;
