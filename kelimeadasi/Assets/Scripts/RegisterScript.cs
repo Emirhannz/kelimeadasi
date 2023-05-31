@@ -1,34 +1,25 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Data;
-using Mono.Data.Sqlite;
 
 public class RegisterScript : MonoBehaviour
 {
-    public InputField usernameField;
-    public InputField passwordField;
+    public InputField usernameInput;
+    public InputField passwordInput;
+    public UserListUI userListUI;
 
-    public void Register()
+    public void OnRegisterButtonClicked()
     {
-        string username = usernameField.text;
-        string password = passwordField.text;
+        string username = usernameInput.text;
+        string password = passwordInput.text;
 
-        // DatabaseInitializer sýnýfýný örnekle
-        DatabaseInitializer initializer = new DatabaseInitializer();
-        string connectionString = initializer.connectionString;
-
-        using (var connection = new SqliteConnection(connectionString))
+        if (DatabaseManager.Instance.RegisterUser(username, password))
         {
-            connection.Open();
-
-            using (var command = connection.CreateCommand())
-            {
-                command.CommandType = CommandType.Text;
-                command.CommandText = "INSERT INTO Users (username, password) VALUES (@username, @password)";
-                command.Parameters.AddWithValue("@username", username);
-                command.Parameters.AddWithValue("@password", password);
-                command.ExecuteNonQuery();
-            }
+            Debug.Log("Registration successful!");
+            userListUI.DisplayUserList(DatabaseManager.Instance.GetUserList());
+        }
+        else
+        {
+            Debug.Log("Registration failed!");
         }
     }
 }

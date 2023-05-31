@@ -1,45 +1,25 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Data;
-using Mono.Data.Sqlite;
-using System;
 
 public class LoginScript : MonoBehaviour
 {
-    public InputField usernameField;
-    public InputField passwordField;
+    public InputField usernameInput;
+    public InputField passwordInput;
+    public UserListUI userListUI;
 
-    public void Login()
+    public void OnLoginButtonClicked()
     {
-        string username = usernameField.text;
-        string password = passwordField.text;
+        string username = usernameInput.text;
+        string password = passwordInput.text;
 
-        // DatabaseInitializer sýnýfýný örnekle
-        DatabaseInitializer initializer = new DatabaseInitializer();
-        string connectionString = initializer.connectionString;
-
-        using (var connection = new SqliteConnection(connectionString))
+        if (DatabaseManager.Instance.LoginUser(username, password))
         {
-            connection.Open();
-
-            using (var command = connection.CreateCommand())
-            {
-                command.CommandType = CommandType.Text;
-                command.CommandText = "SELECT COUNT(*) FROM Users WHERE username = @username AND password = @password";
-                command.Parameters.AddWithValue("@username", username);
-                command.Parameters.AddWithValue("@password", password);
-
-                int count = Convert.ToInt32(command.ExecuteScalar());
-
-                if (count > 0)
-                {
-                    Debug.Log("Giriþ baþarýlý!");
-                }
-                else
-                {
-                    Debug.Log("Giriþ baþarýsýz!");
-                }
-            }
+            Debug.Log("Login successful!");
+            userListUI.DisplayUserList(DatabaseManager.Instance.GetUserList());
+        }
+        else
+        {
+            Debug.Log("Login failed!");
         }
     }
 }
