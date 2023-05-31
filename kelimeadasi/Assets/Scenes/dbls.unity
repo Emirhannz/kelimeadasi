@@ -1206,7 +1206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 147.3, y: 113.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1141488149
@@ -1223,7 +1223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usernameInput: {fileID: 0}
   passwordInput: {fileID: 0}
-  registerButton: {fileID: 0}
+  userListUI: {fileID: 0}
 --- !u!1 &1155493777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,7 +1479,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -182.1, y: -10.416}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1253084720
@@ -1496,7 +1496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usernameInput: {fileID: 0}
   passwordInput: {fileID: 0}
-  loginButton: {fileID: 0}
+  userListUI: {fileID: 0}
 --- !u!1 &1309993929
 GameObject:
   m_ObjectHideFlags: 0
@@ -2108,7 +2108,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -99.99997, y: 113.60001}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1597762008
@@ -2219,13 +2219,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1141488149}
         m_TargetAssemblyTypeName: RegisterScript, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: OnRegisterButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

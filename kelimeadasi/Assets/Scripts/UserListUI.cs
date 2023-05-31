@@ -17,7 +17,17 @@ public class UserListUI : MonoBehaviour
             Debug.LogError("UserListUI: userListText is not assigned. Make sure the Text component is attached to the same GameObject.");
         }
     }
+    public void UpdateUserList(List<User> userList)
+    {
+        string userListString = "User List:\n";
 
+        foreach (User user in userList)
+        {
+            userListString += user.username + "\n";
+        }
+
+        userListText.text = userListString;
+    }
     public void DisplayUserList(List<string> userList)
     {
         // userListText null ise hata ver ve iþlemi sonlandýr
