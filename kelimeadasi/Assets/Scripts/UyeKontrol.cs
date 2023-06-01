@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class UyeKontrol : MonoBehaviour
 {
+    public GameObject HataUyarisi;
     public GameObject[] paneller;
     public TMPro.TMP_InputField[] GirisInput;
     public TMPro.TMP_InputField[] KayitInput;
@@ -80,5 +82,16 @@ public class UyeKontrol : MonoBehaviour
     private void ResponseCallback(string data)
     {
         Debug.Log(data);
+
+        if (data.Contains("GÝRÝÞ BAÞARILI"))
+        {
+            // Anamenüye yönlendirme iþlemini gerçekleþtir
+            SceneManager.LoadScene("anamennnu");
+        }
+        else
+        {
+            HataUyarisi.SetActive(true); // Hatalý kullanýcý adý veya parola durumunda HataUyarisi görünür hale getiriliyor
+        }
+
     }
 }
