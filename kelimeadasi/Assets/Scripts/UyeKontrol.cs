@@ -4,19 +4,21 @@ using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class UyeKontrol : MonoBehaviour
 {
+    public GameObject HataUyarisi;
     public GameObject[] paneller;
     public TMPro.TMP_InputField[] GirisInput;
     public TMPro.TMP_InputField[] KayitInput;
 
     public void _girisYap()
     {
-        StartCoroutine(girisYap(GirisInput[0].text, GirisInput[1].text, this.ResponseCallback));
+        StartCoroutine(GirisYapRequest(GirisInput[0].text, GirisInput[1].text, ResponseCallback));
     }
 
-    IEnumerator girisYap(string kullaniciAdi, string parola, Action<string> callback = null)
+    IEnumerator GirisYapRequest(string kullaniciAdi, string parola, Action<string> callback = null)
     {
         WWWForm form = new WWWForm();
 
@@ -24,23 +26,25 @@ public class UyeKontrol : MonoBehaviour
         form.AddField("Kullanici", kullaniciAdi);
         form.AddField("Parola", parola);
 
-        UnityWebRequest www = UnityWebRequest.Post("https://ozgurturk.com.tr/unity/index.php", form);
-
-        yield return www.SendWebRequest();
-
-        if (www.result != UnityWebRequest.Result.Success)
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/Unity_DB/index.php", form))
         {
-            Debug.Log(www.error);
-        }
-        else
-        {
-            if (callback != null)
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
             {
-                string Data = www.downloadHandler.text;
-                callback(Data);
+                Debug.Log(www.error);
+            }
+            else
+            {
+                if (callback != null)
+                {
+                    string data = www.downloadHandler.text;
+                    callback(data);
+                }
             }
         }
     }
+
 
     public void _KayitOl()
     {
@@ -78,5 +82,16 @@ public class UyeKontrol : MonoBehaviour
     private void ResponseCallback(string data)
     {
         Debug.Log(data);
+
+        if (data.Contains("GÝRÝÞ BAÞARILI"))
+        {
+            // Anamenüye yönlendirme iþlemini gerçekleþtir
+            SceneManager.LoadScene("anamennnu");
+        }
+        else
+        {
+            HataUyarisi.SetActive(true); // Hatalý kullanýcý adý veya parola durumunda HataUyarisi görünür hale getiriliyor
+        }
+
     }
 }
