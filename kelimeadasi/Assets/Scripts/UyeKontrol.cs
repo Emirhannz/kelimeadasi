@@ -83,7 +83,7 @@ public class UyeKontrol : MonoBehaviour
     {
         Debug.Log(data);
 
-        if (data.Contains("GİRİS BAŞARILI"))
+        if (data.Contains("GİRİŞ BAŞARILI"))
         {
             // Anamenüye yönlendirme işlemini gerçekleştir
             SceneManager.LoadScene("anamennnu");
