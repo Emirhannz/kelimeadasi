@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
@@ -83,14 +83,14 @@ public class UyeKontrol : MonoBehaviour
     {
         Debug.Log(data);
 
-        if (data.Contains("GÝRÝÞ BAÞARILI"))
+        if (data.Contains("GÄ°RÄ°S BAÅžARILI"))
         {
-            // Anamenüye yönlendirme iþlemini gerçekleþtir
+            // AnamenÃ¼ye yÃ¶nlendirme iÅŸlemini gerÃ§ekleÅŸtir
             SceneManager.LoadScene("anamennnu");
         }
         else
         {
-            HataUyarisi.SetActive(true); // Hatalý kullanýcý adý veya parola durumunda HataUyarisi görünür hale getiriliyor
+            HataUyarisi.SetActive(true); // Hatalï¿½ kullanï¿½cï¿½ adï¿½ veya parola durumunda HataUyarisi gï¿½rï¿½nï¿½r hale getiriliyor
         }
 
     }
