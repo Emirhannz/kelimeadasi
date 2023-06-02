@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AYARLAR.unity
     guid: 739b7f3a628accf40b3a25ff5eadb8fb
+  - enabled: 1
+    path: Assets/Scenes/SkorTablosu.unity
+    guid: 0039be55d4dc53c499e32047573d7aed
   m_configObjects: {}

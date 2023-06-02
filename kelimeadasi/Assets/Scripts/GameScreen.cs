@@ -43,6 +43,11 @@ public class GameScreen : MonoBehaviour
 
     }
 
+    public void ReturnToSkorTablosu()
+    {
 
+        SceneManager.LoadScene("SkorTablosu");
+
+    }
 
 }
