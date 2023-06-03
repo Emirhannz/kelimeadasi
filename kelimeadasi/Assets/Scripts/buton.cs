@@ -66,6 +66,7 @@ public class buton : MonoBehaviour
         {
             renk.color = Color.green;
 
+
             if (harf_verildi == false)
             {
                 yonet.isaretli_buton_olustur(gameObject);
