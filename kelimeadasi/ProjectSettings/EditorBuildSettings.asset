@@ -6,15 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/dbls.unity
+    guid: c56ca93a5ae19514ab082cce555206a6
+  - enabled: 1
     path: Assets/Scenes/anamennnu.unity
     guid: 808f9511fac6891478cd3f6d593c84a1
   - enabled: 1
-    path: Assets/Scenes/GameScreen.unity
-    guid: 7ccae4ae738c8e0419880b858d1880d4
+    path: Assets/Scenes/oyna.unity
+    guid: 5ae7a5a9e55d32c4e98972c324d46acc
   - enabled: 1
     path: Assets/Scenes/AYARLAR.unity
     guid: 739b7f3a628accf40b3a25ff5eadb8fb
   - enabled: 1
-    path: Assets/Scenes/SkorTablosu.unity
-    guid: 0039be55d4dc53c499e32047573d7aed
+    path: Assets/Scenes/GameScreen.unity
+    guid: 7ccae4ae738c8e0419880b858d1880d4
+  - enabled: 1
+    path: Assets/Scenes/bolum2.unity
+    guid: 7a36e7f3bd7cad34590740488ff55a2d
+  - enabled: 1
+    path: Assets/Scenes/bolum3.unity
+    guid: e8185c153d0c0194585d2c087ffad75b
   m_configObjects: {}

@@ -50,4 +50,25 @@ public class GameScreen : MonoBehaviour
 
     }
 
+    public void ReturnToOyna()
+    {
+
+        SceneManager.LoadScene("oyna");
+
+    }
+
+    public void ReturnTobolum2()
+    {
+
+        SceneManager.LoadScene("bolum2");
+
+    }
+
+    public void ReturnTobolum3()
+    {
+
+        SceneManager.LoadScene("bolum3");
+
+    }
+
 }

@@ -51,17 +51,17 @@ public class AudioManager : MonoBehaviour
             saat.Stop();
             gameMusic.Stop();
         }
-        else if (scene.name == "GameScreen")
-        {
-            menuMusic.Stop();
 
-            if (!gameMusic.isPlaying)
-            {
+        else if (scene.name == "GameScreen" || scene.name == "bolum2" || scene.name == "bolum3")
+        {
+            menuMusic.Pause();
+
+           
                 gameMusic.Play();
                 saat.Play();
-            }
+            
         }
-        else if (scene.name == "AYARLAR" || scene.name == "SkorTablosu")
+        else if (scene.name == "AYARLAR" || scene.name == "SkorTablosu" || scene.name == "oyna" )
         {
             if (!menuMusic.isPlaying)
             {
