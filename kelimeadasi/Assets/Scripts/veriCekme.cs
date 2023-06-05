@@ -23,7 +23,7 @@ public class veriCekme : MonoBehaviour
     {
         WWWForm form = new WWWForm();
         form.AddField("komut", "veriCekme");
-        string url = "http://localhost/veriTabani.php";
+        string url = "http://localhost/Unity_DB/index.php";
         WWW w = new WWW(url, form);
         yield return w;
         gelen_veriler = w.text.Split(";");
