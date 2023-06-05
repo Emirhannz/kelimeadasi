@@ -88,7 +88,7 @@ public class UyeKontrol : MonoBehaviour
             // Anamenüye yönlendirme işlemini gerçekleştir
             SceneManager.LoadScene("anamennnu");
         }
-        else
+        if (data.Contains("HATALI KULLANICI ADI VEYA PAROLA"))
         {
             HataUyarisi.SetActive(true); // Hatal� kullan�c� ad� veya parola durumunda HataUyarisi g�r�n�r hale getiriliyor
         }
